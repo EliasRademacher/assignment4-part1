@@ -1,0 +1,1 @@
+/* This file should accept either a GET or POST for input. */
