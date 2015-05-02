@@ -1,13 +1,16 @@
 <?php
 error_reporting(E_ALL);
+//gc_enable(); /* Enable Garbage Collector */
 ini_set('display_errors', 'On');
 header('Content-Type: text/html');
 
 session_start(); /* Store session on a cookie */
 
 if (isset($_GET['logout']) and $_GET['logout'] == 1) {
-	$_POST = array();
-	$_SESSION = array();
+	unset($_POST);
+	unset($_GET_);
+	unset($_SESSION);
+	unset($content1_session);
 	session_destroy();
 	header("Location: http://web.engr.oregonstate.edu/~rademace/assignment4-part1/src/login.php", true);
 	die();
@@ -31,10 +34,11 @@ if (session_status() == PHP_SESSION_ACTIVE
 	
 	$_SESSION[$_visits]++;
 	
+	$content1_session = array();
+	$content1_session = $_SESSION;
 	
-	echo "Hello $_SESSION[name], you have visited this page $_SESSION[$_visits] times before.  <br>
-		Click <a href='http://web.engr.oregonstate.edu/~rademace/assignment4-part1/src/content1.php?logout=1'>here</a> to logout.<br>";
-
+	echo "Hello $_SESSION[name], you have visited this page $_SESSION[$_visits] times before.  <br>";
+	echo "Click <a href='http://web.engr.oregonstate.edu/~rademace/assignment4-part1/src/content1.php?logout=1'>here</a> to logout.<br>";
 	echo "<br>Click <a href='http://web.engr.oregonstate.edu/~rademace/assignment4-part1/src/content2.php'>here</a> to visit page 2<br>";
 	
 }

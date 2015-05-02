@@ -1,3 +1,7 @@
+Start: Fri, 2 May 2015 11:20:00 -0700
+End: Fri, 2 May 2015  12:15:00 -0700
+Tasks: Put a link in content2.php that leads back to content1.php
+
 Start: Fri, 1 May 2015 20:40:00 -0700
 End: Fri, 1 May 2015  23:50:00-0700
 Tasks: (Almost) complete login.php, content1.php, and content2.php
